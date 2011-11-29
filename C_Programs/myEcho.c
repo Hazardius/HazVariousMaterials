@@ -9,8 +9,8 @@ char *flaga;
     myslniki = 1;
     for (iterator = 1; iterator < argc; iterator++) {
         niebylmyslnik = 1;
-        if (myslniki) {
-            flaga = argv[iterator];
+        flaga = argv[iterator];
+        if ((flaga[0] == '-') && (myslniki)) {
             if (flaga[1] == 'n') {
                 if (flag_n) {
                     printf("Too much -n options!\n");
@@ -30,23 +30,7 @@ char *flaga;
         }
         if (niebylmyslnik) {
             myslniki = 0;
-            if (flag_e) {
-                while (1) {
-                    x = argv[iterator][it2];
-                    if (x == '\0')
-                        break;
-                    if (x == '\\') {
-                        x = argv[iterator][++it2];
-                        printf("\%c", x);
-                    } else {
-                        printf("%c", x);
-                    }
-                    it2++;
-                }
-                
-            } else {
-                printf("%s ", argv[iterator]);
-            }
+            printf("%s ", argv[iterator]);
         }
     }
     if (!flag_n) printf("\n");
