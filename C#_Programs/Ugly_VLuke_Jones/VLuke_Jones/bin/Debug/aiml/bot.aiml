@@ -1,0 +1,19 @@
+<aiml>
+
+ <category>
+ <pattern>Stoj! *</pattern>
+ <template>Moja mapa to:</template>
+ </category>
+
+ <category>
+ <pattern>Moja mapa to:*</pattern>
+ <that>Stoj! *</that>
+ <template>A moja mapa to:</template>
+ </category>
+ 
+ <category>
+ <pattern>*</pattern>
+ <template>Nie rozumiem!</template>
+ </category>
+
+</aiml>
