@@ -1,0 +1,20 @@
+<xs:schema
+ xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="students">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="student" maxOccurs="unbounded" type="studentType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+ 
+ 	<xsd:complexType name="studentType">
+		<xsd:sequence>
+			<xsd:element name="id" type="xsd:decimal"/>
+			<xsd:element name="firstname" type="xsd:string"/>
+			<xsd:element name="lastname" type="xsd:string"/>										<xs:element name="rose" type="xs:string"/>
+		</xs:sequence>
+	</xsd:complexType>
+
+</xs:schema>

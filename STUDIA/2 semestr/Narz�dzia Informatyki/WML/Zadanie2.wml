@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+  <template>
+    <do name="s1" type="accept" label="Page 1">
+      <go href="#s1"/>
+    </do>
+    <do name="s2" type="accept" label="Page 2">
+      <go href="#s2"/>
+    </do> 
+    <do name="s3" type="accept" label="Page 3">
+      <go href="#s3"/>
+    </do>
+  </template>
+
+  <card id="s1" title="Tytulowa">
+    <p align="center">
+    <br/>
+    <b>Witaj!</b>
+    <br/>
+    <i>Zapraszam do rozejrzenia sie po tej stronie!</i>
+    <br/>
+    <img alt="PNG" src="png.png" height="60" width="60" />
+    <br/>
+    </p>
+  </card>
+
+  <card id="s2" title="Wszystkie Szablony">         
+    <p align="center">
+    <br/>
+      <b>Bold</b><br/>
+      <i>Italic</i><br/>
+      <u>Underline</u><br/>
+      <small>Small</small><br/>
+      <big>Big</big><br/>
+      <em>Emphasis</em><br/>
+      <strong>Strong</strong>
+    <br/>
+    </p>
+  </card>
+  
+  <card id="s3" title="Ptaszynka">
+    <p align="center">
+    <br/>
+    <img src="ptak.png" alt="Ptaszyna" height="100" width="100" />
+    <br/>
+    </p>
+  </card>
+</wml>

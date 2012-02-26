@@ -1,0 +1,35 @@
+* {
+margin: 3px;
+padding: 0;
+}
+
+#strona {
+width: 700px;
+margin: 0 auto;
+}
+
+body {
+text-align: center;
+background-color:#b0c4de;
+}
+
+#naglowek {
+width: 690px;
+height: 150px;
+border: 2px solid #000;
+}
+
+#lewo {
+width: 190px;
+height: 250px;
+float: left;
+border: 2px solid #000;
+}
+
+#prawo {
+width: 490px;
+height: 500px;
+float: right;
+border: 2px solid #000;
+background-image:url('obrazek.jpg');
+}

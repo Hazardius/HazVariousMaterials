@@ -1,0 +1,507 @@
+/* CSS Document */
+html {height:100%;}
+
+        body {height:100%; margin:0; padding:0;}
+        
+        #bg {position:fixed; top:0; left:0; width:100%; height:100%;}
+        
+        #content {position:relative; z-index:1;}
+
+div { 
+      margin: 0 auto;
+    }
+    
+
+img {
+    border:0px;
+    }
+
+#background{
+  position:fixed;
+  width:100%; 
+  height:100%;
+  }
+    
+#outer{
+  height:auto;
+  height:100%;
+  min-height:100%; 
+  
+}
+
+#bd{
+  text-align:left;
+  width: 979px;
+  top: 0px;
+}
+
+#head {
+  text-align:left;
+  width: 979px;
+  height: 76px;
+  top: 0px;
+}
+
+.logo_box {
+  margin-left: 0px; 
+  margin-top: 15px;      
+  width: 225px;
+  height: 61px;
+  float: left;
+}
+.langmenu{
+  width: 300px;
+  height: 23px;
+  margin-top: 0px;
+  margin-right: 0px;
+  text-align:left;
+  float: right
+}
+
+.menu {
+  width: 647px;
+  height: 22px;
+  margin-top: 23px;
+  margin-right: 0px;
+  text-align:left;
+  float: right;
+}
+
+ul.top, ul.top li.top {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.top {
+	float: left;
+	width: 100%;
+}
+
+ul.top li.top {
+	float: left;
+	background: url("images/buttons/leftbutback.png") no-repeat left top;
+	margin-right: 0px;
+}
+
+ul.top a:link, ul.top a:visited {
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+	background: url("images/buttons/rightbutback.png") no-repeat right top;
+	color: #505050;
+	padding: 4px 16px 5px 0px;
+	margin-left: 14px;
+}
+
+ul.top a:hover {
+	color: #b9b9b9; 
+}
+
+ul.lang, ul.lang li.lang {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.lang {
+	float: left;
+	width: 100%;
+}
+
+ul.lang li.lang {
+	float: right;
+	margin-left:5px;
+}
+
+ul.lang a:link, ul.lang a:visited {
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+	background: url("images/buttons/tloup.png") no-repeat right top;
+	color: #505050;
+	margin-left: 35px;
+}
+
+ul.lang a:hover {
+	color: #b9b9b9; 
+}
+
+a.topmenu{  
+font-family: Verdana;
+font-size: 11px;
+font-weight: bold;
+text-decoration: none; 
+word-spacing: -10%; 
+color: #505050;
+}
+
+.menu_left{
+  width: 168px;
+  margin-top: 94px;
+  text-align: right;
+  position: absolute;
+}
+
+a.leftmenu{  
+font-family: Verdana;  
+text-align: right;
+font-size: 11px;
+font-weight: bold;
+text-decoration: none;
+word-spacing: -10%; 
+color: #505050;
+background: url("images/buttons/leftmenu.png") no-repeat left top;
+}
+
+a.a{  
+font-family: Verdana; 
+font-size: 11px;
+font-weight: bold;
+text-decoration: none;
+word-spacing: -10%; 
+color: #ffffff;
+background: url("images/buttons/leftmenu.png") no-repeat 0 -21px;   
+}
+
+ul.left, ul.left li.left {
+	margin-top: 6px; 
+	display: block;
+	list-style: none;
+	padding: 0;      
+}
+
+ul.left li.left {
+	float: bottom;
+	margin-right: -1px;
+}
+
+ul.left a:link, ul.left a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	padding: 3px 13px 5px 12px;
+}
+
+ul.left a.a:hover { 
+background: url("images/buttons/leftmenu.png") no-repeat 0 -42px;  
+}
+
+.trescup{
+width: 557px;
+height: 13px;
+background-image: url("images/contentup.png");
+}
+
+.tresc{
+  width: 556px;
+  height: auto;
+  margin-top: 74px; 
+  margin-left: 168px;
+  text-align:left;    
+  float: left;
+}
+
+h1.toptekst{
+  padding-left: 19px;   
+  margin-top: 0px;  
+  margin-bottom: 0px; 
+  font: 18px Verdana; 
+  word-spacing: -1px; 
+  color: #aa1b22; 
+  position: static;
+  width: 538px;  
+  height: 41px; 
+  background-image: url("images/textback.png");  
+}
+
+.tekst{
+  width: 557px;
+  height: auto;
+  text-align:left;
+  background-image: url("images/textback.png");
+  overflow: hidden;
+}
+
+#top1{
+  text-align:left;
+  width: 979px;
+  height: auto; 
+}
+
+.index{
+  margin-left: 19px; 
+  margin-right: 19px;    
+  margin-top: 11px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #505050; 
+  text-align: justify;    
+}
+
+.index1{
+  margin-left: 19px;   
+  margin-top: 0px;  
+  margin-bottom: 0px; 
+  margin-right: 19px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #505050;  
+  text-align: justify;        
+}
+
+.inde{          
+  margin-left: 51px; 
+  margin-right: 19px;
+  margin-top: 0px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #505050; 
+  text-align: justify;      
+}
+
+.trescdown{
+width: 557px;
+height: 18px;
+margin-top:0px;
+background-image: url("images/trescdown.png");
+}
+
+.right{
+  width: 236px;
+  height: auto;
+  margin-top: 74px;
+  margin-left: 18px;
+  text-align:left;
+  float: left;
+  position: relative;
+}
+
+.smallup{  
+  width: 236px;
+  height: 12px;
+background-image: url("images/smallup.png");
+}
+
+.smallbody{ 
+  width: 236px;
+  height: auto;
+background-color: #ffffff;
+}
+
+.smalldown{   
+  width: 236px;
+  height: 13px;
+background-image: url("images/smalldown.png");
+
+}
+
+h1.rightstrip{
+  margin-left: 15px;
+  margin-right: 15px;    
+  margin-top: 0px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  color: #505050; 
+  text-align: justify;
+}
+
+h1.aktualnosc{
+  margin-left: 15px;   
+  margin-top: 17px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  color: #505050;     
+}
+
+#footer {               
+  width: 979px;
+  height: 38px; 
+  margin-top: 49px; 
+  float: right;
+}
+
+h2.produkty1{       
+  margin-left: 30px;   
+  margin-top: 15px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  color: #aa1b22;   
+  word-spacing: -1px;    
+}
+
+h2.uslugi{       
+  margin-left: 39px;   
+  margin-top: 45px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  color: #aa1b22;   
+  line-height: 15px;
+  word-spacing: -1px;    
+}
+
+h3.tech{
+  margin-left: 39px;
+  margin-right: 17px;   
+  margin-top: 20px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #aa1b22;
+}
+
+h4.tech2{
+  margin-left: 39px;   
+  margin-top: 0px;  
+  margin-bottom: 25px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #505050;
+}
+
+h3.zespol{
+  margin-left: 19px;   
+  margin-top: 0px;  
+  margin-bottom: 13px; 
+  font: 14px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #aa1b22;
+}
+
+h3.kg{
+  margin-right: 2px; 
+  margin-left: 38px;   
+  margin-top: 0px;  
+  margin-bottom: 0px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #aa1b22;
+  float: left;
+}
+
+.aktitle{
+  margin-left: 147px;
+  padding-left: 13px; 
+  margin-bottom: 0px;
+  margin-right: 19px;  
+  font: 16px Verdana;
+  word-spacing: -1px; 
+  color: #aa1b22;
+  background: url(images/parafka.png) no-repeat scroll 0px 2px;
+}
+
+.akadmin{
+  margin-left: 19px;
+  margin-bottom: 0px;
+  margin-right: 19px;  
+  font: 16px Verdana;
+  word-spacing: -1px; 
+  color: #aa1b22;
+}
+
+.akdate{
+  margin-left: 160px; 
+  margin-top: 0px;  
+  margin-bottom: 0px;
+  margin-right: 19px;  
+  font: 12px Verdana;
+  word-spacing: -1px; 
+  color: #aa1b22;
+}
+
+.aktresc{
+  margin-left: 160px; 
+  margin-top: 0px;
+  margin-right: 19px;
+  margin-bottom: 20px;  
+  font: 12px Verdana;
+  word-spacing: -1px; 
+  color: #505050;
+}
+
+h1.toptekst1{
+  padding-left: 16px;   
+  margin-top: 0px;  
+  margin-bottom: 17px; 
+  font: 18px Verdana; 
+  word-spacing: -1px; 
+  color: #505050; 
+}
+
+a.aktualnosci{  
+font-family: Verdana;
+margin-left:16px;      
+margin-top: 0px;      
+font-size: 11px;
+text-decoration: underline;
+word-spacing: -10%; 
+color: #aa1b22;   
+}
+
+.aktualnoscitytul1{  
+font-family: Verdana;     
+margin-top: 17px;       
+margin-bottom: 2px; 
+margin-left:16px;  
+margin-right:16px; 
+font-size: 11px;
+word-spacing: -10%; 
+color: #aa1b22;
+font-weight: normal;   
+}
+
+.aktualnoscidata1{  
+font-family: Verdana;     
+margin-top: 0px;       
+margin-bottom: 2px; 
+margin-left:16px; 
+font-size: 11px;
+word-spacing: -10%; 
+color: #aa1b22;
+font-weight: normal;   
+}
+
+a.aktualnosci2{  
+text-decoration: none;
+}
+
+.aktualnoscilinki{   
+font-family: Verdana;
+text-align: right;
+margin-right:19px;
+font-size: 11px;
+color: #aa1b22;
+letter-spacing: 2px; 
+}
+
+a.aktualnosci3{    
+font-family: Verdana;
+font-size: 11px;
+letter-spacing: 2px;
+text-decoration: none;
+color: #aa1b22;
+font-weight: bolder;
+}
+
+.partnerzy{ 
+  margin-left: 55px;   
+  margin-top: 12px;  
+  margin-bottom: 0px; 
+  margin-right: 19px; 
+  font: 12px Verdana;  
+  line-height: 15px;
+  word-spacing: -1px; 
+  color: #505050;  
+  text-align: justify;  
+
+}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <osoba>
+    <firma>Nazwa Firmy</firma>
+    <imie>Marcin Hanc</imie>
+    <stanowisko>Prezes</stanowisko>
+    <www>www.onet.pl</www>
+    <mail>mail@o2.pl</mail>
+    <telefon>0-86 272</telefon>
+    <miasto>Poznań</miasto>
+    <ulica>ul. Ładna</ulica>
+    <nip>1234567890123</nip>
+  </osoba>
+</root>

@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>JS-Bot-Shell 1.0</title>
+
+
+
+<style>
+BODY {
+   background-color: green;
+   font-family: Helvetica;
+   font-size: 10pt;
+   margin-top: 10px;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 10px;
+   }
+.button {
+   font-family: Helvetica;
+   font-size: 10pt;
+   width: 92px;
+   }
+textarea {
+   background-color: FFFF00;
+   font-family: arial;
+   font-size: 10pt;
+   font-weight: bold;
+   color: cyan;
+   }
+select {
+   font-family: arial;
+   font-size: 10pt;
+   width: 350px;
+   margin-left: 0px;
+   }
+td {
+   font-family: arial;
+   font-size: 10pt;
+  }
+</style>
+
+<script type="text/javascript">
+
+//----Data Declarations----
+
+var convpatterns = new Array (
+  new Array (".*(k|K)(u|U)(r|R)(w|W).*","Nie przeklinaj przy mnie!!!","Nieladnie uzywac wulgaryzmow!","Niezla wioche w domu miales!"),
+  new Array ("(Czesc|czesc|Witaj|witaj).*","Witaj w Rozmowach w Tloku!"),
+  new Array (".*(rozumiesz|rozumiec|czaisz).*","Niemozliwe abym zawsze Ciebie rozumial!"),
+  new Array ("(Ile ).*[\?]","Nie wiem ile!"), 
+  new Array (".*(informatyk).*","O! Bardzo interesuje sie informatyka!","Informatyka to moj konik!"),
+  new Array ("(.*?)[\?]","Zadales nieobslugiwane pytanie! Haha!"),
+  new Array ("(.*)","Inne smieci!"));
+
+
+uinput = ""
+soutput = ""
+dialog = ""
+
+//-----The Core Code------
+
+
+//-------
+ function mainroutine() {
+ uinput = document.mainscreen.BasicTextArea4.value;
+ dialog = dialog + "User: " + uinput +  '\r' + "\n";
+  conversationpatterns()
+ dialog = dialog  +  '\r' + "\n";
+  updatescreen()
+
+}
+
+//-------
+function conversationpatterns() {
+   for (i=0; i < convpatterns.length; i++) {
+    re = new RegExp (convpatterns[i][0], "i");
+    if (re.test(uinput)) {
+      len = convpatterns[i].length - 1;
+      index = Math.ceil( len * Math.random());
+      reply = convpatterns[i][index];
+      soutput = uinput.replace(re, reply);
+      soutput = initialCap(soutput);
+      dialog = dialog + "System: " + soutput +  '\r' + "\n";
+      break;
+  }
+ }
+}
+
+//-------
+
+function initScreen() {
+ updatescreen()
+}
+
+//-------
+function updatescreen() {
+ document.mainscreen.BasicTextArea1.value = dialog
+ document.mainscreen.BasicTextArea2.value = soutput
+ document.mainscreen.BasicTextArea3.value = uinput
+ document.mainscreen.BasicTextArea4.value = ""
+}
+
+//-------
+function initialCap(field) {
+   field = field.substr(0, 1).toUpperCase() + field.substr(1);
+   return field
+}
+
+
+//----Supplemental Code To Test System---
+
+
+
+//------
+function runtest(){
+
+var testdata = new Array (
+  new Array ("Hello."),
+  new Array ("I can't understand you."),
+  new Array ("I'm going to New York tomorrow."),
+  new Array ("Are you serious?"),
+  new Array ("Because they can."),
+  new Array ("I'm really sorry about that.")
+
+);
+
+
+          for (train=0; train < testdata.length; train++) {
+             document.mainscreen.BasicTextArea4.value = testdata[train];
+             mainroutine()
+
+             }
+
+}
+
+</script>
+</head>
+
+<body onLoad="initScreen()">
+
+<form name="mainscreen" onkeypress = "if(event.keyCode == 13) {mainroutine();return false}">
+
+<table align="center">
+<tr>
+<td>
+
+Dialog<br />
+<textarea name="BasicTextArea1" rows="15" cols="75"></textarea><br />
+
+System Output<br />
+<textarea name="BasicTextArea2" rows="2" cols="75"></textarea><br />
+
+Your Last Input<br />
+<textarea name="BasicTextArea3" rows="2" cols="75"></textarea><br />
+
+Type Here and Hit "Enter"<br />
+<textarea name="BasicTextArea4" rows="2" cols="75"></textarea><br />
+
+</td>
+</tr>
+</table>
+
+<p align = "center">
+<input id=runbutton  class="button" type="button" value="Enter" name="run_button"  onClick="mainroutine()">
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<input id=runbutton  class="button" type="button" value="Run Test" name="run_button"  onClick="runtest()">
+</p>
+</form>
+</body>
+</html>

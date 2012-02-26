@@ -1,0 +1,38 @@
+* {
+margin: 3px;
+padding: 0;
+}
+
+body {
+text-align: center;
+background-color:#c0cb0f;
+}
+
+#naglowek {
+width: 700px;
+height: 200px;
+border: 2px solid #000;
+}
+
+#title {
+color:red;
+font-weight: bold;
+text-decoration:underline;
+}
+
+#date {
+color:green;
+text-decoration:underline;
+}
+
+#wysw {
+color:white;
+}
+
+#tk {
+color:green;
+}
+
+#tresc {
+color:white;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="scheme.xsl"?>
+<root>
+<osoba>
+<firma>Zielona Budka</firma>
+<imie> Marcin Hanc</imie>
+<stanowisko> Prezes</stanowisko>
+<www> www.zielonabudka.pl</www>
+<mail> nic@pl</mail>
+<telefon> 0000513</telefon>
+<miasto> Krakow</miasto>
+<ulica> ul. Obi-Wana Kenobiego</ulica>
+<nip> 123456789012</nip>
+</osoba>
+</root>

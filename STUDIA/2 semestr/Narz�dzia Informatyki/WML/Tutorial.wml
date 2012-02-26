@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+  <card id="strona1" title="Pierwsza Strona">
+    <p>                              
+    <a href="#tab">Link to tab!</a>
+    <br/>
+    <a href="#strona2">Link to 2!</a>
+    </p>
+  </card>
+
+  <card id="strona2" title="Druga Strona">         
+    <p>
+    <a href="#tab">Link to tab!</a>
+    <br/>
+    <a href="#strona1">Link to 1!</a>
+    </p>
+  </card>
+  
+  <card id="tab" title="Tabela z wyrownaniem">
+    <p>
+      <table columns="2" align="CC">
+        <tr>
+          <td>
+            <a href="#strona1">Link to 1!</a>
+          </td>
+          <td>
+            <a href="#strona2">Link to 2!</a>
+          </td>
+        </tr>
+      </table>
+    </p>
+  </card>
+</wml>

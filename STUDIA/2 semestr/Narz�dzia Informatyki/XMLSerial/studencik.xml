@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_24" class="java.beans.XMLDecoder"> 
+ <object class="Student"> 
+  <void property="boot"> 
+   <int>43</int> 
+  </void> 
+  <void property="dist"> 
+   <int>100</int> 
+  </void> 
+  <void property="high"> 
+   <int>175</int> 
+  </void> 
+  <void property="imie"> 
+   <string>Marcin</string> 
+  </void> 
+  <void property="kierunek"> 
+   <string>NW</string> 
+  </void> 
+  <void property="plec"> 
+   <string>male</string> 
+  </void> 
+  <void property="rok_ur"> 
+   <int>1</int> 
+  </void> 
+ </object> 
+</java> 

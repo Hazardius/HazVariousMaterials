@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structure>
+<aktualnosc>
+  <tytul>English version of our website</tytul>
+  <data>25/02/2009 </data>
+  <tresc>
+  Today Starts work our website in english.
+  </tresc>
+  <wyswietlane>1</wyswietlane>
+  <tresckrotka>
+  Today Starts work our website in english.
+  </tresckrotka>
+</aktualnosc>
+<aktualnosc>
+  <tytul>English version of our website</tytul>
+  <data>25/04/2009 </data>
+  <tresc>
+  Today Starts work our website in english hahaha.
+  </tresc>
+  <wyswietlane>0</wyswietlane>
+  <tresckrotka>
+  Today Starts work our website in english 123.
+  </tresckrotka>
+</aktualnosc>
+</structure>

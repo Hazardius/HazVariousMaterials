@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>GRA w KULKI</title>
+        <style>
+            BODY {
+                background-color: green;
+                font-family: Helvetica;
+                font-size: 10pt;
+                margin-top: 10px;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+            .button {
+                font-family: Helvetica;
+                font-size: 10pt;
+                width: 50px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function start(){
+                var i=1;
+                var koniec=document.getElementById("ZNACZNIK");
+                for(i=1;i<=10;i++){
+                    var noda = document.createElement("button");
+                    noda.setAttribute("id", "button"+i );
+                    noda.setAttribute("type", "button");
+                    noda.setAttribute("onClick", "mainroutine("+i+",10)");
+                    koniec.appendChild(noda);
+                }
+            }
+
+            function mainroutine(click,max){
+                if(click<2){
+                    if(max>click){
+                        var i=1;
+                        for (i=1;i<=(max-click);i++)
+                        {
+                            document.write("<input id=runbutton  class=\"button\" type=\"button\" value=\"Kulka "+i+"\" name=\"button"+i+"\"  onClick=\"mainroutine("+i+","+(max-click)+")\">");
+                            document.write("<br />");
+                        }} else {}
+                } else {
+                    var i=1;
+                    for (i=1;i<=max;i++)
+                    {
+                        document.write("<input id=runbutton  class=\"button\" type=\"button\" value=\"Kulka "+i+"\" name=\"button"+i+"\"  onClick=\"mainroutine("+i+","+(max-click)+")\">");
+                        document.write("<br />");
+                    }
+                    document.write("<br /> NIEDOZWOLONE POSUNIECIE!");
+                    document.firstChild.
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="temp">
+            <button id="start" type="button" onClick="start()">START</button>
+                <br />
+            <div id="ZNACZNIK">
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+        /// <summary>
+        /// Wyswietla okno excela z danymi podanymi w tablicy
+        /// </summary>
+        /// <param name="data"></param>
+        private void ShowInExcel(string[][] data)
+        {
+            try
+            {
+                ApplicationClass excel = new ApplicationClass();
+
+
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+
+                Workbook wb = excel.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+                Worksheet ws = (Worksheet)wb.Worksheets[1];
+
+                if (ws != null)
+                {
+
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        for (int j = 0; j < data[i].Length; j++)
+                        {
+                            string index = "" + GetExcelColumnName(j + 1) + "" + (i + 1);
+
+                            Range r = ws.get_Range(index);
+
+                            r.Value2 = data[i][j];
+                        }
+
+                    }
+
+                    excel.Visible = true;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Nie mo¿na otworzyæ okna Excela, sprawdŸ czy pakiet Office jest zainstalowany!");
+            }
+        }
