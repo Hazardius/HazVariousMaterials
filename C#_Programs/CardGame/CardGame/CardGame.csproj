@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>CardGame</AssemblyName>
+    <RootNamespace>Makao</RootNamespace>
+
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Resources\*.jpg" />
+    <None Include="Resources\*.png" />
+  </ItemGroup>
+</Project>
