@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Makao
+namespace CardGame
 {
     public partial class WinLose : Form
     {
-        MakaoForm father;
+        MainWindowForm father;
         public WinLose()
         {
             InitializeComponent();
         }
 
-        public WinLose(MakaoForm ojciec, bool wygrana)
+        public WinLose(MainWindowForm ojciec, bool wygrana)
         {
             InitializeComponent();
             father = ojciec;

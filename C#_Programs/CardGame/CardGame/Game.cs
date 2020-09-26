@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Makao
+namespace CardGame
 {
-    class Gra
+    class Game
     {
-        public static List<Karta> Talia;
-        public static Stack<Karta> Ukryte;
-        public static Stack<Karta> Zagrane;
-        public static List<Karta> Human;
-        public static List<Karta> Computer;
+        public static List<Card> Talia;
+        public static Stack<Card> Ukryte;
+        public static Stack<Card> Zagrane;
+        public static List<Card> Human;
+        public static List<Card> Computer;
         public static bool Rozgrywka=false;
         public static bool gracz = true;
 
         public static void newGame()
         {
-            Talia = new List<Karta>();
-            Ukryte = new Stack<Karta>();
-            Zagrane = new Stack<Karta>();
-            Human = new List<Karta>();
-            Computer = new List<Karta>();
-            Karta.makeTalia(Talia);
-            Karta.utworzStosik(Talia, Ukryte);
-            Karta.rozdaj(Ukryte, Human, Computer, Zagrane);
-            Karta.posortuj(Human);
-            Karta.posortuj(Computer);
+            Talia = new List<Card>();
+            Ukryte = new Stack<Card>();
+            Zagrane = new Stack<Card>();
+            Human = new List<Card>();
+            Computer = new List<Card>();
+            Card.createDeck(Talia);
+            Card.utworzStosik(Talia, Ukryte);
+            Card.rozdaj(Ukryte, Human, Computer, Zagrane);
+            Card.sort(Human);
+            Card.sort(Computer);
             Rozgrywka = true;
         }
 
@@ -39,20 +39,20 @@ namespace Makao
             Computer.Clear();
             Rozgrywka = false;
             gracz = true;
-            Program.okno.look_cards();
+            Program.window.look_cards();
         }
 
-        public static void HPlay(List<Karta> wybrane)
+        public static void HPlay(List<Card> wybrane)
         {
             gracz = true;
-            if (((Gra.Human.Count() == 0) || (Gra.Computer.Count() == 0)) && (Gra.Rozgrywka))
+            if (((Game.Human.Count() == 0) || (Game.Computer.Count() == 0)) && (Game.Rozgrywka))
             {
                 //Wywolanie okienka "Wygrales/Przegrales".
-                bool kto = (Gra.Human.Count() == 0);
-                Program.okno.Enabled = false;
-                WinLose x = new WinLose(Program.okno, kto);
+                bool kto = (Game.Human.Count() == 0);
+                Program.window.Enabled = false;
+                WinLose x = new WinLose(Program.window, kto);
                 x.ShowDialog();
-                Gra.CleanGame();
+                Game.CleanGame();
                 return;
             }
             int ilosc = wybrane.Count();
@@ -61,9 +61,9 @@ namespace Makao
                 Zagrane.Push(wybrane.ElementAt(prz));
             }
             bool okok=false;
-            if (Zagrane.Peek().czyFunkcyjna())
+            if (Zagrane.Peek().isFunctional())
                 okok=true;
-            CPlay(new Action<int>(Zagrane.Peek().funkcja),ilosc);
+            CPlay(new Action<int>(Zagrane.Peek().function),ilosc);
             if (!okok)
                 CPlay();
             gracz = true;
@@ -71,68 +71,68 @@ namespace Makao
 
         public static void CPlay()
         {
-            if (((Gra.Human.Count() == 0) || (Gra.Computer.Count() == 0)) && (Gra.Rozgrywka))
+            if (((Game.Human.Count() == 0) || (Game.Computer.Count() == 0)) && (Game.Rozgrywka))
             {
                 //Wywolanie okienka "Wygrales/Przegrales".
-                bool kto = (Gra.Human.Count() == 0);
-                Program.okno.Enabled = false;
-                WinLose x = new WinLose(Program.okno, kto);
+                bool kto = (Game.Human.Count() == 0);
+                Program.window.Enabled = false;
+                WinLose x = new WinLose(Program.window, kto);
                 x.ShowDialog();
-                Gra.CleanGame();
+                Game.CleanGame();
                 return;
             }
             bool juzPo = true;
             for (int i = 0; i < Computer.Count(); i++)
             {
-                if (Computer.ElementAt(i).czyMoznaPolozycNa(Zagrane.Peek()))
+                if (Computer.ElementAt(i).canPlaceOnTopOf(Zagrane.Peek()))
                 {
                     int ilosc = 1;
                     Zagrane.Push(Computer.ElementAt(i));
                     Computer.RemoveAt(i);
                     juzPo = false;
                     gracz = false;
-                    Zagrane.Peek().funkcja(ilosc);
+                    Zagrane.Peek().function(ilosc);
                     gracz = true;
                     break;
                 }
             }
             if (juzPo)
             {
-                Karta dodana;
-                if (Gra.Ukryte.Count() > 1)
+                Card dodana;
+                if (Game.Ukryte.Count() > 1)
                 {
-                    dodana = Gra.Ukryte.Pop();
+                    dodana = Game.Ukryte.Pop();
                 }
                 else
                 {
-                    dodana = Gra.Ukryte.Pop();
-                    Karta.utworzStosikZostawJeden(Gra.Zagrane, Gra.Ukryte);
+                    dodana = Game.Ukryte.Pop();
+                    Card.utworzStosikZostawJeden(Game.Zagrane, Game.Ukryte);
                 }
-                if (dodana.czyMoznaPolozycNa(Zagrane.Peek()))
+                if (dodana.canPlaceOnTopOf(Zagrane.Peek()))
                 {
                     int ilosc = 1;
                     Zagrane.Push(dodana);
                     gracz = true;
-                    Zagrane.Peek().funkcja(ilosc);
+                    Zagrane.Peek().function(ilosc);
                 }
                 else
                 {
                     Computer.Add(dodana);
-                    Karta.posortuj(Computer);
+                    Card.sort(Computer);
                 }
             }
         }
 
         public static void CPlay(Action<int> funkcja, int ile)
         {
-            if (((Gra.Human.Count() == 0) || (Gra.Computer.Count() == 0)) && (Gra.Rozgrywka))
+            if (((Game.Human.Count() == 0) || (Game.Computer.Count() == 0)) && (Game.Rozgrywka))
             {
                 //Wywolanie okienka "Wygrales/Przegrales".
-                bool kto = (Gra.Human.Count() == 0);
-                Program.okno.Enabled = false;
-                WinLose x = new WinLose(Program.okno, kto);
+                bool kto = (Game.Human.Count() == 0);
+                Program.window.Enabled = false;
+                WinLose x = new WinLose(Program.window, kto);
                 x.ShowDialog();
-                Gra.CleanGame();
+                Game.CleanGame();
                 return;
             }
             funkcja(ile);

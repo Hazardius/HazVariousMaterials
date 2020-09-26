@@ -7,25 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Makao
+namespace CardGame
 {
     public partial class Dobranie : Form
     {
-        private MakaoForm father;
-        private Karta wzieta;
+        private MainWindowForm father;
+        private Card wzieta;
 
         public Dobranie()
         {
             InitializeComponent();
         }
 
-        internal Dobranie(MakaoForm ojciec, Karta dobrana)
+        internal Dobranie(MainWindowForm ojciec, Card dobrana)
         {
             InitializeComponent();
             father = ojciec;
             wzieta = dobrana;
-            wzieta.rysuj(Wizerunek);
-            if (!(wzieta.czyMoznaPolozycNa(Gra.Zagrane.Peek())))
+            wzieta.draw(Wizerunek);
+            if (!(wzieta.canPlaceOnTopOf(Game.Zagrane.Peek())))
             {
                 PlayButton.Enabled = false;
             }
@@ -39,21 +39,21 @@ namespace Makao
         private void PlayButton_Click(object sender, EventArgs e)
         {
             int ilosc = 1;
-            Gra.Zagrane.Push(wzieta);
-            Gra.Zagrane.Peek().funkcja(ilosc);
-            Gra.gracz = false;
-            Gra.CPlay();
-            Gra.gracz = true;
+            Game.Zagrane.Push(wzieta);
+            Game.Zagrane.Peek().function(ilosc);
+            Game.gracz = false;
+            Game.CPlay();
+            Game.gracz = true;
             this.Close();
         }
 
         private void TakeButton_Click(object sender, EventArgs e)
         {
-            Gra.Human.Add(wzieta);
-            Karta.posortuj(Gra.Human);
-            Gra.gracz = false;
-            Gra.CPlay();
-            Gra.gracz = true;
+            Game.Human.Add(wzieta);
+            Card.sort(Game.Human);
+            Game.gracz = false;
+            Game.CPlay();
+            Game.gracz = true;
             this.Close();
         }
 

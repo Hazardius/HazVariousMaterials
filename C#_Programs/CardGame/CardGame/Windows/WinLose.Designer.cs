@@ -1,4 +1,4 @@
-﻿namespace Makao
+﻿namespace CardGame
 {
     partial class WinLose
     {
@@ -31,9 +31,9 @@
             this.Info = new System.Windows.Forms.Label();
             this.OK = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // Info
-            // 
+            //
             this.Info.AutoSize = true;
             this.Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Info.Location = new System.Drawing.Point(39, 9);
@@ -41,9 +41,9 @@
             this.Info.Size = new System.Drawing.Size(207, 42);
             this.Info.TabIndex = 0;
             this.Info.Text = "Przegrales!";
-            // 
+            //
             // OK
-            // 
+            //
             this.OK.Location = new System.Drawing.Point(42, 54);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(200, 35);
@@ -51,9 +51,9 @@
             this.OK.Text = "OK!";
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
-            // 
+            //
             // WinLose
-            // 
+            //
             this.AcceptButton = this.OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

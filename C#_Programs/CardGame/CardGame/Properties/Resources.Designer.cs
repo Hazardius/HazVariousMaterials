@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Makao.Properties {
+namespace CardGame.Properties {
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace Makao.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,13 +39,13 @@ namespace Makao.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Makao.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CardGame.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,374 +59,374 @@ namespace Makao.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         internal static System.Drawing.Bitmap Back {
             get {
                 object obj = ResourceManager.GetObject("Back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo10 {
+
+        internal static System.Drawing.Bitmap Hearts10 {
             get {
-                object obj = ResourceManager.GetObject("Karo10", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo2 {
+
+        internal static System.Drawing.Bitmap Hearts2 {
             get {
-                object obj = ResourceManager.GetObject("Karo2", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo3 {
+
+        internal static System.Drawing.Bitmap Hearts3 {
             get {
-                object obj = ResourceManager.GetObject("Karo3", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo4 {
+
+        internal static System.Drawing.Bitmap Hearts4 {
             get {
-                object obj = ResourceManager.GetObject("Karo4", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo5 {
+
+        internal static System.Drawing.Bitmap Hearts5 {
             get {
-                object obj = ResourceManager.GetObject("Karo5", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo6 {
+
+        internal static System.Drawing.Bitmap Hearts6 {
             get {
-                object obj = ResourceManager.GetObject("Karo6", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo7 {
+
+        internal static System.Drawing.Bitmap Hearts7 {
             get {
-                object obj = ResourceManager.GetObject("Karo7", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo8 {
+
+        internal static System.Drawing.Bitmap Hearts8 {
             get {
-                object obj = ResourceManager.GetObject("Karo8", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Karo9 {
+
+        internal static System.Drawing.Bitmap Hearts9 {
             get {
-                object obj = ResourceManager.GetObject("Karo9", resourceCulture);
+                object obj = ResourceManager.GetObject("Hearts9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KaroAs {
+
+        internal static System.Drawing.Bitmap HeartsAce {
             get {
-                object obj = ResourceManager.GetObject("KaroAs", resourceCulture);
+                object obj = ResourceManager.GetObject("HeartsAce", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KaroDama {
+
+        internal static System.Drawing.Bitmap HeartsQueen {
             get {
-                object obj = ResourceManager.GetObject("KaroDama", resourceCulture);
+                object obj = ResourceManager.GetObject("HeartsQueen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KaroKrol {
+
+        internal static System.Drawing.Bitmap HeartsKing {
             get {
-                object obj = ResourceManager.GetObject("KaroKrol", resourceCulture);
+                object obj = ResourceManager.GetObject("HeartsKing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KaroWalet {
+
+        internal static System.Drawing.Bitmap HeartsJack {
             get {
-                object obj = ResourceManager.GetObject("KaroWalet", resourceCulture);
+                object obj = ResourceManager.GetObject("HeartsJack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier10 {
+
+        internal static System.Drawing.Bitmap Diamonds10 {
             get {
-                object obj = ResourceManager.GetObject("Kier10", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier2 {
+
+        internal static System.Drawing.Bitmap Diamonds2 {
             get {
-                object obj = ResourceManager.GetObject("Kier2", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier3 {
+
+        internal static System.Drawing.Bitmap Diamonds3 {
             get {
-                object obj = ResourceManager.GetObject("Kier3", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier4 {
+
+        internal static System.Drawing.Bitmap Diamonds4 {
             get {
-                object obj = ResourceManager.GetObject("Kier4", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier5 {
+
+        internal static System.Drawing.Bitmap Diamonds5 {
             get {
-                object obj = ResourceManager.GetObject("Kier5", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier6 {
+
+        internal static System.Drawing.Bitmap Diamonds6 {
             get {
-                object obj = ResourceManager.GetObject("Kier6", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier7 {
+
+        internal static System.Drawing.Bitmap Diamonds7 {
             get {
-                object obj = ResourceManager.GetObject("Kier7", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier8 {
+
+        internal static System.Drawing.Bitmap Diamonds8 {
             get {
-                object obj = ResourceManager.GetObject("Kier8", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Kier9 {
+
+        internal static System.Drawing.Bitmap Diamonds9 {
             get {
-                object obj = ResourceManager.GetObject("Kier9", resourceCulture);
+                object obj = ResourceManager.GetObject("Diamonds9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KierAs {
+
+        internal static System.Drawing.Bitmap DiamondsAce {
             get {
-                object obj = ResourceManager.GetObject("KierAs", resourceCulture);
+                object obj = ResourceManager.GetObject("DiamondsAce", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KierDama {
+
+        internal static System.Drawing.Bitmap DiamondsQueen {
             get {
-                object obj = ResourceManager.GetObject("KierDama", resourceCulture);
+                object obj = ResourceManager.GetObject("DiamondsQueen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KierKrol {
+
+        internal static System.Drawing.Bitmap DiamondsKing {
             get {
-                object obj = ResourceManager.GetObject("KierKrol", resourceCulture);
+                object obj = ResourceManager.GetObject("DiamondsKing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap KierWalet {
+
+        internal static System.Drawing.Bitmap DiamondsJack {
             get {
-                object obj = ResourceManager.GetObject("KierWalet", resourceCulture);
+                object obj = ResourceManager.GetObject("DiamondsJack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik10 {
+
+        internal static System.Drawing.Bitmap Spades10 {
             get {
-                object obj = ResourceManager.GetObject("Pik10", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik2 {
+
+        internal static System.Drawing.Bitmap Spades2 {
             get {
-                object obj = ResourceManager.GetObject("Pik2", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik3 {
+
+        internal static System.Drawing.Bitmap Spades3 {
             get {
-                object obj = ResourceManager.GetObject("Pik3", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik4 {
+
+        internal static System.Drawing.Bitmap Spades4 {
             get {
-                object obj = ResourceManager.GetObject("Pik4", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik5 {
+
+        internal static System.Drawing.Bitmap Spades5 {
             get {
-                object obj = ResourceManager.GetObject("Pik5", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik6 {
+
+        internal static System.Drawing.Bitmap Spades6 {
             get {
-                object obj = ResourceManager.GetObject("Pik6", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik7 {
+
+        internal static System.Drawing.Bitmap Spades7 {
             get {
-                object obj = ResourceManager.GetObject("Pik7", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik8 {
+
+        internal static System.Drawing.Bitmap Spades8 {
             get {
-                object obj = ResourceManager.GetObject("Pik8", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Pik9 {
+
+        internal static System.Drawing.Bitmap Spades9 {
             get {
-                object obj = ResourceManager.GetObject("Pik9", resourceCulture);
+                object obj = ResourceManager.GetObject("Spades9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap PikAs {
+
+        internal static System.Drawing.Bitmap SpadesAce {
             get {
-                object obj = ResourceManager.GetObject("PikAs", resourceCulture);
+                object obj = ResourceManager.GetObject("SpadesAce", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap PikDama {
+
+        internal static System.Drawing.Bitmap SpadesQueen {
             get {
-                object obj = ResourceManager.GetObject("PikDama", resourceCulture);
+                object obj = ResourceManager.GetObject("SpadesQueen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap PikKrol {
+
+        internal static System.Drawing.Bitmap SpadesKing {
             get {
-                object obj = ResourceManager.GetObject("PikKrol", resourceCulture);
+                object obj = ResourceManager.GetObject("SpadesKing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap PikWalet {
+
+        internal static System.Drawing.Bitmap SpadesJack {
             get {
-                object obj = ResourceManager.GetObject("PikWalet", resourceCulture);
+                object obj = ResourceManager.GetObject("SpadesJack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl10 {
+
+        internal static System.Drawing.Bitmap Clubs10 {
             get {
-                object obj = ResourceManager.GetObject("Trefl10", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl2 {
+
+        internal static System.Drawing.Bitmap Clubs2 {
             get {
-                object obj = ResourceManager.GetObject("Trefl2", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl3 {
+
+        internal static System.Drawing.Bitmap Clubs3 {
             get {
-                object obj = ResourceManager.GetObject("Trefl3", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl4 {
+
+        internal static System.Drawing.Bitmap Clubs4 {
             get {
-                object obj = ResourceManager.GetObject("Trefl4", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl5 {
+
+        internal static System.Drawing.Bitmap Clubs5 {
             get {
-                object obj = ResourceManager.GetObject("Trefl5", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl6 {
+
+        internal static System.Drawing.Bitmap Clubs6 {
             get {
-                object obj = ResourceManager.GetObject("Trefl6", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl7 {
+
+        internal static System.Drawing.Bitmap Clubs7 {
             get {
-                object obj = ResourceManager.GetObject("Trefl7", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl8 {
+
+        internal static System.Drawing.Bitmap Clubs8 {
             get {
-                object obj = ResourceManager.GetObject("Trefl8", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap Trefl9 {
+
+        internal static System.Drawing.Bitmap Clubs9 {
             get {
-                object obj = ResourceManager.GetObject("Trefl9", resourceCulture);
+                object obj = ResourceManager.GetObject("Clubs9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap TreflAs {
+
+        internal static System.Drawing.Bitmap ClubsAce {
             get {
-                object obj = ResourceManager.GetObject("TreflAs", resourceCulture);
+                object obj = ResourceManager.GetObject("ClubsAce", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap TreflDama {
+
+        internal static System.Drawing.Bitmap ClubsQueen {
             get {
-                object obj = ResourceManager.GetObject("TreflDama", resourceCulture);
+                object obj = ResourceManager.GetObject("ClubsQueen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap TreflKrol {
+
+        internal static System.Drawing.Bitmap ClubsKing {
             get {
-                object obj = ResourceManager.GetObject("TreflKrol", resourceCulture);
+                object obj = ResourceManager.GetObject("ClubsKing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        internal static System.Drawing.Bitmap TreflWalet {
+
+        internal static System.Drawing.Bitmap ClubsJack {
             get {
-                object obj = ResourceManager.GetObject("TreflWalet", resourceCulture);
+                object obj = ResourceManager.GetObject("ClubsJack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

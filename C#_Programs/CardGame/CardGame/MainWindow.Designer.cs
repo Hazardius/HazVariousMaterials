@@ -1,6 +1,6 @@
-namespace Makao
+namespace CardGame
 {
-    partial class MakaoForm
+    partial class MainWindowForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@ namespace Makao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakaoForm));
-            this.MakaoMainMenuStrip = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindowForm));
+            this.CardGameMainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wylaczGreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +63,7 @@ namespace Makao
             this.HumanChoose4 = new System.Windows.Forms.CheckBox();
             this.takeButton = new System.Windows.Forms.Button();
             this.HumanLabel = new System.Windows.Forms.Label();
-            this.MakaoMainMenuStrip.SuspendLayout();
+            this.CardGameMainMenuStrip.SuspendLayout();
             this.Zagrane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableCard3)).BeginInit();
@@ -80,17 +80,17 @@ namespace Makao
             ((System.ComponentModel.ISupportInitialize)(this.KartyKomputera)).BeginInit();
             this.SuspendLayout();
             //
-            // MakaoMainMenuStrip
+            // CardGameMainMenuStrip
             //
-            this.MakaoMainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CardGameMainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.plikToolStripMenuItem,
             this.graToolStripMenuItem,
             this.pomocToolStripMenuItem});
-            this.MakaoMainMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MakaoMainMenuStrip.Name = "MakaoMainMenuStrip";
-            this.MakaoMainMenuStrip.Size = new System.Drawing.Size(630, 24);
-            this.MakaoMainMenuStrip.TabIndex = 0;
-            this.MakaoMainMenuStrip.Text = "Main Menu Strip";
+            this.CardGameMainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.CardGameMainMenuStrip.Name = "CardGameMainMenuStrip";
+            this.CardGameMainMenuStrip.Size = new System.Drawing.Size(630, 24);
+            this.CardGameMainMenuStrip.TabIndex = 0;
+            this.CardGameMainMenuStrip.Text = "Main Menu Strip";
             //
             // plikToolStripMenuItem
             //
@@ -113,7 +113,7 @@ namespace Makao
             this.rozpocznijToolStripMenuItem});
             this.graToolStripMenuItem.Name = "graToolStripMenuItem";
             this.graToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.graToolStripMenuItem.Text = "&Gra";
+            this.graToolStripMenuItem.Text = "&Game";
             //
             // rozpocznijToolStripMenuItem
             //
@@ -404,7 +404,7 @@ namespace Makao
             this.HumanLabel.Text = "Posiadasz 0 kart!";
             this.HumanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             //
-            // MakaoForm
+            // MainWindowForm
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -424,18 +424,18 @@ namespace Makao
             this.Controls.Add(this.KartyKomputera);
             this.Controls.Add(this.KartyCzlowieka);
             this.Controls.Add(this.Zagrane);
-            this.Controls.Add(this.MakaoMainMenuStrip);
+            this.Controls.Add(this.CardGameMainMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MainMenuStrip = this.MakaoMainMenuStrip;
+            this.MainMenuStrip = this.CardGameMainMenuStrip;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(640, 480);
             this.MinimumSize = new System.Drawing.Size(640, 480);
-            this.Name = "MakaoForm";
+            this.Name = "MainWindowForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Makao";
+            this.Text = "Card Game";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.MakaoMainMenuStrip.ResumeLayout(false);
-            this.MakaoMainMenuStrip.PerformLayout();
+            this.CardGameMainMenuStrip.ResumeLayout(false);
+            this.CardGameMainMenuStrip.PerformLayout();
             this.Zagrane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TableCard2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableCard3)).EndInit();
@@ -457,7 +457,7 @@ namespace Makao
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip MakaoMainMenuStrip;
+        private System.Windows.Forms.MenuStrip CardGameMainMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wylaczGreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graToolStripMenuItem;

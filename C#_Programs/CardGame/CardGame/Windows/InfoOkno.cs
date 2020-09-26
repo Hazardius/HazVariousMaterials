@@ -7,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Makao
+namespace CardGame
 {
-    public partial class InfoOkno : Form
+    public partial class InfoWindow : Form
     {
-        MakaoForm father;
-        public InfoOkno()
+        MainWindowForm father;
+        public InfoWindow()
         {
             InitializeComponent();
         }
-        public InfoOkno(MakaoForm ojciec, string wiadomosc, string krotkawiad)
+        public InfoWindow(MainWindowForm ojciec, string wiadomosc, string krotkawiad)
         {
             InitializeComponent();
             father = ojciec;
@@ -25,12 +25,12 @@ namespace Makao
             Informacja.Enabled = false;
         }
 
-        private void InfoOkno_Load(object sender, EventArgs e)
+        private void InfoWindow_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void InfoOkno_FormClosing(object sender, FormClosingEventArgs e)
+        private void InfoWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             father.Enabled = true;
             father.look_cards();

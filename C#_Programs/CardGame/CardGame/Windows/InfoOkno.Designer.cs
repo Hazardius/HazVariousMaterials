@@ -1,6 +1,6 @@
-﻿namespace Makao
+﻿namespace CardGame
 {
-    partial class InfoOkno
+    partial class InfoWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,9 @@
             this.ok = new System.Windows.Forms.Button();
             this.Informacja = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
+            //
             // ok
-            // 
+            //
             this.ok.Location = new System.Drawing.Point(12, 12);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(30, 30);
@@ -41,17 +41,17 @@
             this.ok.Text = "OK";
             this.ok.UseVisualStyleBackColor = true;
             this.ok.Click += new System.EventHandler(this.ok_Click);
-            // 
+            //
             // Informacja
-            // 
+            //
             this.Informacja.Location = new System.Drawing.Point(48, 12);
             this.Informacja.Name = "Informacja";
             this.Informacja.Size = new System.Drawing.Size(224, 90);
             this.Informacja.TabIndex = 2;
             this.Informacja.Text = "Tekst informacji!";
-            // 
-            // InfoOkno
-            // 
+            //
+            // InfoWindow
+            //
             this.AcceptButton = this.ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -62,11 +62,11 @@
             this.MaximumSize = new System.Drawing.Size(300, 150);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 150);
-            this.Name = "InfoOkno";
+            this.Name = "InfoWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "InfoOkno";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InfoOkno_FormClosing);
-            this.Load += new System.EventHandler(this.InfoOkno_Load);
+            this.Text = "InfoWindow";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InfoWindow_FormClosing);
+            this.Load += new System.EventHandler(this.InfoWindow_Load);
             this.ResumeLayout(false);
 
         }

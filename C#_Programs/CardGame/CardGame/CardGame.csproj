@@ -7,7 +7,7 @@
 
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>CardGame</AssemblyName>
-    <RootNamespace>Makao</RootNamespace>
+    <RootNamespace>CardGame</RootNamespace>
 
     <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
   </PropertyGroup>

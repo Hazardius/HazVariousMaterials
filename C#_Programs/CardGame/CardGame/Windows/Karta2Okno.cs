@@ -7,21 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Makao
+namespace CardGame
 {
-    public partial class Karta2Okno : Form
+    public partial class Card2Window : Form
     {
-        private MakaoForm father;
+        private MainWindowForm father;
         private int ilosc;
-        private List<Karta> posiadane;
-        private Wartosc war;
+        private List<Card> posiadane;
+        private Rank war;
 
-        public Karta2Okno()
+        public Card2Window()
         {
             InitializeComponent();
         }
 
-        internal Karta2Okno(MakaoForm ojciec, List<Karta> lista ,int ile)
+        internal Card2Window(MainWindowForm ojciec, List<Card> lista ,int ile)
         {
             InitializeComponent();
             oneButton.Enabled = false;
@@ -31,55 +31,55 @@ namespace Makao
             father = ojciec;
             posiadane = lista;
             ilosc = ile;
-            war = Wartosc.k2;
-            if (Wartosc.k3 == Gra.Zagrane.Peek().getWartosc())
+            war = Rank.c2;
+            if (Rank.c3 == Game.Zagrane.Peek().Rank)
             {
                 innaButton.Text = "Zagraj 2";
                 Info.Text = "Komputer zagral 3!";
                 Text = "Komputer zagral 3!";
-                war = Wartosc.k3;
+                war = Rank.c3;
             }
 
-            List<Karta> atakujace = new List<Karta>();
+            List<Card> atakujace = new List<Card>();
             for (int albert = 0; albert < ilosc; albert++)
             {
-                atakujace.Add(Gra.Zagrane.ElementAt(albert));
+                atakujace.Add(Game.Zagrane.ElementAt(albert));
             }
-            int mnogi = atakujace.FindAll(delegate(Karta k)
+            int mnogi = atakujace.FindAll(delegate(Card k)
             {
-                if (k.getWartosc() == Wartosc.k2)
+                if (k.Rank == Rank.c2)
                     return true;
                 return false;
             }).Count() * 2;
-            mnogi = mnogi + atakujace.FindAll(delegate(Karta k)
+            mnogi = mnogi + atakujace.FindAll(delegate(Card k)
             {
-                if (k.getWartosc() == Wartosc.k3)
+                if (k.Rank == Rank.c3)
                     return true;
                 return false;
             }).Count() * 3;
             takeIt.Text = "Wez " + mnogi;
-            posiadane.ElementAt(0).rysuj(wyb1);
+            posiadane.ElementAt(0).draw(wyb1);
             int numerbutonow=0;
-            if (posiadane.ElementAt(0).getWartosc() == war)
+            if (posiadane.ElementAt(0).Rank == war)
                 numerbutonow++;
             else
                 innaButton.Enabled = true;
             if(posiadane.Count()>1){
-                posiadane.ElementAt(1).rysuj(wyb2);
-                if (posiadane.ElementAt(1).getWartosc() == war)
+                posiadane.ElementAt(1).draw(wyb2);
+                if (posiadane.ElementAt(1).Rank == war)
                     numerbutonow++;
                 else
                     innaButton.Enabled = true;
                 if (posiadane.Count() > 2)
                 {
-                    posiadane.ElementAt(2).rysuj(wyb3);
-                    if (posiadane.ElementAt(2).getWartosc() == war)
+                    posiadane.ElementAt(2).draw(wyb3);
+                    if (posiadane.ElementAt(2).Rank == war)
                         numerbutonow++;
                     else
                         innaButton.Enabled = true;
                     if (posiadane.Count() > 3)
                     {
-                        posiadane.ElementAt(3).rysuj(wyb4);
+                        posiadane.ElementAt(3).draw(wyb4);
                         innaButton.Enabled = true;
                     }
                 }
@@ -99,12 +99,12 @@ namespace Makao
             }
         }
 
-        private void Karta2Okno_Load(object sender, EventArgs e)
+        private void Card2Window_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Karta2Okno_FormClosing(object sender, FormClosingEventArgs e)
+        private void Card2Window_FormClosing(object sender, FormClosingEventArgs e)
         {
             father.Enabled = true;
             father.look_cards();
@@ -112,142 +112,142 @@ namespace Makao
 
         private void oneButton_Click(object sender, EventArgs e)
         {
-            Karta jedna = Gra.Human.Find(
-                delegate(Karta k)
+            Card jedna = Game.Human.Find(
+                delegate(Card k)
                 {
-                    if (k.getWartosc() == war)
+                    if (k.Rank == war)
                         return true;
                     return false;
                 });
-            int jednaid = Gra.Human.FindIndex(
-                delegate(Karta k)
+            int jednaid = Game.Human.FindIndex(
+                delegate(Card k)
                 {
-                    if (k.getWartosc() == war)
+                    if (k.Rank == war)
                         return true;
                     return false;
                 });
-            Gra.Zagrane.Push(jedna);
-            Gra.Human.RemoveAt(jednaid);
-            Gra.gracz = true;
-            Gra.CPlay(new Action<int>(Gra.Zagrane.Peek().funkcja), ilosc + 1);
+            Game.Zagrane.Push(jedna);
+            Game.Human.RemoveAt(jednaid);
+            Game.gracz = true;
+            Game.CPlay(new Action<int>(Game.Zagrane.Peek().function), ilosc + 1);
             father.look_cards();
             this.Close();
         }
 
         private void twoButton_Click(object sender, EventArgs e)
         {
-            Karta jedna;
+            Card jedna;
             int jednaid;
             for (int i = 0; i < 2; i++)
             {
-                jedna = Gra.Human.Find(
-                    delegate(Karta k)
+                jedna = Game.Human.Find(
+                    delegate(Card k)
                     {
-                        if (k.getWartosc() == war)
+                        if (k.Rank == war)
                             return true;
                         return false;
                     });
-                jednaid = Gra.Human.FindIndex(
-                    delegate(Karta k)
+                jednaid = Game.Human.FindIndex(
+                    delegate(Card k)
                     {
-                        if (k.getWartosc() == war)
+                        if (k.Rank == war)
                             return true;
                         return false;
                     });
-                Gra.Zagrane.Push(jedna);
-                Gra.Human.RemoveAt(jednaid);
+                Game.Zagrane.Push(jedna);
+                Game.Human.RemoveAt(jednaid);
             }
-            Gra.gracz = true;
-            Gra.CPlay(new Action<int>(Gra.Zagrane.Peek().funkcja), ilosc + 1);
+            Game.gracz = true;
+            Game.CPlay(new Action<int>(Game.Zagrane.Peek().function), ilosc + 1);
             father.look_cards();
             this.Close();
         }
 
         private void threeButton_Click(object sender, EventArgs e)
         {
-            Karta jedna;
+            Card jedna;
             int jednaid;
             for (int i = 0; i < 3; i++)
             {
-                jedna = Gra.Human.Find(
-                    delegate(Karta k)
+                jedna = Game.Human.Find(
+                    delegate(Card k)
                     {
-                        if (k.getWartosc() == war)
+                        if (k.Rank == war)
                             return true;
                         return false;
                     });
-                jednaid = Gra.Human.FindIndex(
-                    delegate(Karta k)
+                jednaid = Game.Human.FindIndex(
+                    delegate(Card k)
                     {
-                        if (k.getWartosc() == war)
+                        if (k.Rank == war)
                             return true;
                         return false;
                     });
-                Gra.Zagrane.Push(jedna);
-                Gra.Human.RemoveAt(jednaid);
+                Game.Zagrane.Push(jedna);
+                Game.Human.RemoveAt(jednaid);
             }
-            Gra.gracz = true;
-            Gra.CPlay(new Action<int>(Gra.Zagrane.Peek().funkcja), ilosc + 1);
+            Game.gracz = true;
+            Game.CPlay(new Action<int>(Game.Zagrane.Peek().function), ilosc + 1);
             father.look_cards();
             this.Close();
         }
 
         private void innaButton_Click(object sender, EventArgs e)
         {
-            Wartosc temp = Wartosc.k2;
-            if (war == Wartosc.k2)
-                temp = Wartosc.k3;
-            Karta jedna = Gra.Human.Find(
-                delegate(Karta k)
+            Rank temp = Rank.c2;
+            if (war == Rank.c2)
+                temp = Rank.c3;
+            Card jedna = Game.Human.Find(
+                delegate(Card k)
                 {
-                    if (k.getWartosc() == temp)
+                    if (k.Rank == temp)
                         return true;
                     return false;
                 });
-            int jednaid = Gra.Human.FindIndex(
-                delegate(Karta k)
+            int jednaid = Game.Human.FindIndex(
+                delegate(Card k)
                 {
-                    if (k.getWartosc() == temp)
+                    if (k.Rank == temp)
                         return true;
                     return false;
                 });
-            Gra.Zagrane.Push(jedna);
-            Gra.Human.RemoveAt(jednaid);
-            Gra.gracz = true;
-            Gra.CPlay(new Action<int>(Gra.Zagrane.Peek().funkcja), ilosc + 1);
+            Game.Zagrane.Push(jedna);
+            Game.Human.RemoveAt(jednaid);
+            Game.gracz = true;
+            Game.CPlay(new Action<int>(Game.Zagrane.Peek().function), ilosc + 1);
             father.look_cards();
             this.Close();
         }
 
         private void takeIt_Click(object sender, EventArgs e)
         {
-            List<Karta> atakujace = new List<Karta>();
+            List<Card> atakujace = new List<Card>();
             for (int albert = 0; albert < ilosc; albert++)
             {
-                atakujace.Add(Gra.Zagrane.ElementAt(albert));
+                atakujace.Add(Game.Zagrane.ElementAt(albert));
             }
-            int mnogi = atakujace.FindAll(delegate(Karta k)
+            int mnogi = atakujace.FindAll(delegate(Card k)
             {
-                if (k.getWartosc() == Wartosc.k2)
+                if (k.Rank == Rank.c2)
                     return true;
                 return false;
             }).Count() * 2;
-            mnogi = mnogi + atakujace.FindAll(delegate(Karta k)
+            mnogi = mnogi + atakujace.FindAll(delegate(Card k)
             {
-                if (k.getWartosc() == Wartosc.k3)
+                if (k.Rank == Rank.c3)
                     return true;
                 return false;
             }).Count() * 3;
 
-            if (!(Gra.Ukryte.Count() > mnogi))
+            if (!(Game.Ukryte.Count() > mnogi))
             {
-                Karta.utworzStosikZostawJeden(Gra.Zagrane, Gra.Ukryte);
+                Card.utworzStosikZostawJeden(Game.Zagrane, Game.Ukryte);
             }
             for (int om = 0; om < mnogi; om++)
             {
-                Gra.Human.Add(Gra.Ukryte.Pop());
+                Game.Human.Add(Game.Ukryte.Pop());
             }
-            Karta.posortuj(Gra.Human);
+            Card.sort(Game.Human);
             father.look_cards();
             this.Close();
         }

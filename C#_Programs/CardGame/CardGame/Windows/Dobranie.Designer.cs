@@ -1,4 +1,4 @@
-﻿namespace Makao
+﻿namespace CardGame
 {
     partial class Dobranie
     {
@@ -37,9 +37,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Wizerunek)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // Info
-            // 
+            //
             this.Info.AutoSize = true;
             this.Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Info.Location = new System.Drawing.Point(43, 9);
@@ -47,27 +47,27 @@
             this.Info.Size = new System.Drawing.Size(199, 31);
             this.Info.TabIndex = 1;
             this.Info.Text = "Dobrales karte!";
-            // 
+            //
             // Wizerunek
-            // 
+            //
             this.Wizerunek.Image = ((System.Drawing.Image)(resources.GetObject("Wizerunek.Image")));
             this.Wizerunek.Location = new System.Drawing.Point(115, 43);
             this.Wizerunek.Name = "Wizerunek";
             this.Wizerunek.Size = new System.Drawing.Size(55, 75);
             this.Wizerunek.TabIndex = 5;
             this.Wizerunek.TabStop = false;
-            // 
+            //
             // panel1
-            // 
+            //
             this.panel1.Controls.Add(this.TakeButton);
             this.panel1.Controls.Add(this.PlayButton);
             this.panel1.Location = new System.Drawing.Point(46, 124);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(193, 36);
             this.panel1.TabIndex = 6;
-            // 
+            //
             // TakeButton
-            // 
+            //
             this.TakeButton.Location = new System.Drawing.Point(95, 0);
             this.TakeButton.Name = "TakeButton";
             this.TakeButton.Size = new System.Drawing.Size(98, 36);
@@ -75,9 +75,9 @@
             this.TakeButton.Text = "Zachowaj";
             this.TakeButton.UseVisualStyleBackColor = true;
             this.TakeButton.Click += new System.EventHandler(this.TakeButton_Click);
-            // 
+            //
             // PlayButton
-            // 
+            //
             this.PlayButton.Location = new System.Drawing.Point(0, 0);
             this.PlayButton.Name = "PlayButton";
             this.PlayButton.Size = new System.Drawing.Size(95, 36);
@@ -85,9 +85,9 @@
             this.PlayButton.Text = "Zagraj";
             this.PlayButton.UseVisualStyleBackColor = true;
             this.PlayButton.Click += new System.EventHandler(this.PlayButton_Click);
-            // 
+            //
             // Dobranie
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 164);
